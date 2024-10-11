@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="cover-image">
+          <img src="image1.png" alt="" class="cover-image">
+        </div>
+
+        <div class="info">
+            <h4 class="song_name">How Do You Sleep</h4>
+            <h5 class="artist">Sam Smith</h3>
+        </div>
+
+        <div class="buttons">
+          <div class="player-button">
+            <i class="fas fa-play" id="button_play" onclick="playSong()"></i>
+          </div>
+          <div class="pause-button">
+            <i class="fas fa-pause" id="button_pause" onclick="pauseSong()"></i>
+          </div>
+        </div>
+
+    </div>
+
+    <audio id="song">
+      <source src="Sam Smith - How Do You Sleep.mp3" type="audio/mpeg">
+    </audio>
+
+    <!--<script src="script.js"></script>-->
+
+    <script>
+      var songEl = document.getElementById("song");
+
+      function playSong(){
+        songEl.play();
+      }
+      function pauseSong(){
+        songEl.pause();
+      }
+    </script>
+</body>
+</html>
